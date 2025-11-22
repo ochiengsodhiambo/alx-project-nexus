@@ -154,3 +154,11 @@ SWAGGER_SETTINGS = {
     'USE_SESSION_AUTH': False,  # disables the Basic Auth popup
     'JSON_EDITOR': True,
 }
+
+# Simple JWT settings to adjust token lifetime
+from datetime import timedelta
+
+SIMPLE_JWT = {
+    'ACCESS_TOKEN_LIFETIME': timedelta(days=7),      # Default is 5 minutes
+    'REFRESH_TOKEN_LIFETIME': timedelta(days=30),    # Default is 1 day
+}

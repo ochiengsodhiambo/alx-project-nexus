@@ -6,6 +6,8 @@ from rest_framework.permissions import IsAuthenticatedOrReadOnly, AllowAny, IsAu
 from rest_framework.serializers import ModelSerializer
 from rest_framework.views import APIView
 from rest_framework.response import Response
+from users.models import Seller
+from .serializers import SellerSerializer
 
 # Models
 from .models import Product, Category
@@ -82,3 +84,10 @@ class ProductViewSet(viewsets.ModelViewSet):
     filter_backends = [filters.OrderingFilter, filters.SearchFilter]
     ordering_fields = ['price', 'name']
     search_fields = ['name', 'description', 'category__name']
+
+# -------------------------------
+# Seller viewset
+# -------------------------------
+class SellerViewSet(viewsets.ModelViewSet):
+    queryset = Seller.objects.all()
+    serializer_class = SellerSerializer

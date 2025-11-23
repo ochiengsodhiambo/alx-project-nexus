@@ -22,6 +22,17 @@ class CartSerializer(serializers.ModelSerializer):
     class Meta:
         model = Cart
         fields = ['id','buyer','total_price','items']
+
+class AddToCartSerializer(serializers.Serializer):
+    product_id = serializers.IntegerField(
+        required=True,
+        help_text="ID of the product to add to cart"
+    )
+    quantity = serializers.IntegerField(
+        required=False,
+        default=1,
+        help_text="Quantity of the product(s) to add"
+    )
         
 class SellerSerializer(serializers.ModelSerializer):
     class Meta:

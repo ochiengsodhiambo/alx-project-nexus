@@ -30,6 +30,7 @@ This is a **Django REST Framework** backend for an e-commerce application, suppo
 
 ![alt text](image.png)
 
+
 ---
 
 ### Installation

@@ -26,9 +26,11 @@ This is a **Django REST Framework** backend for an e-commerce application, suppo
 
 ---
 
+### ERD
 
+![alt text](image.png)
 
-
+---
 
 ### Installation
 
